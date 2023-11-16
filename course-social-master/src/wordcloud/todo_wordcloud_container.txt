@@ -1,0 +1,9 @@
+apt update && apt install -y software-properties-common
+
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
+add-apt-repository -y https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+apt update && apt install -y adoptopenjdk-8-hotspot
+
+apt install -y fonts-nanum fonts-nanum-coding fonts-nanum-extra
+
+export JAVA_HOME=/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
